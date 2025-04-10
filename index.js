@@ -5,6 +5,7 @@ const mongoose = require("mongoose")
 const cors = require("cors");
 const mainRouter = require("./routes/index")
 const MONGOURI = process.env.MONGO_URI;
+const PORT = 3000
 
 const app = express();
 app.use(cors());
@@ -19,6 +20,6 @@ app.use("/api/v1", mainRouter);
 
 app.use("api/v1", mainRouter);
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log("Server is running on port 3000");
 })
