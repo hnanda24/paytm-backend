@@ -8,13 +8,7 @@ const MONGOURI = process.env.MONGO_URI;
 const PORT = 3000
 
 const app = express();
-app.use(cors(
-    {
-        origin: ["https://paytm-backend-8zim.vercel.app/"],
-        methods: ["POST", "GET"],
-        credentials: true
-    }
-));
+app.use(cors());
 app.use(express.json());
 
 
